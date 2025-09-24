@@ -36,14 +36,14 @@ namespace Codebase
             {
                 Vector3 directionToPlayer = _playerRef.transform.position - transform.position;
 
-                directionToPlayer.y = 0;
-
                 if (directionToPlayer != Vector3.zero)
                 {
                     Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer, Vector3.up);
 
                     transform.rotation = Quaternion.Euler(0, targetRotation.eulerAngles.y, 0);
                 }
+                
+                directionToPlayer.y = 0;
             }
         }
     }

@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 925706573042860462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -262.1832, y: 70.610466, z: 10.93729}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -54,7 +54,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 1.66
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3

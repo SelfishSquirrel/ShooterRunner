@@ -15,6 +15,7 @@ namespace Codebase
 
         public void ApplyDamage(float health)
         {
+            print("Player got: "  + health);
             if (CurrentHealth - health <= 0)
             {
                 CurrentHealth = 0;
