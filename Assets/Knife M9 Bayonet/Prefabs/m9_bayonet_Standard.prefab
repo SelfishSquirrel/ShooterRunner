@@ -190,13 +190,14 @@ GameObject:
   - component: {fileID: 8898389997947345101}
   - component: {fileID: 73266742765454110}
   - component: {fileID: 5730586099476719222}
+  - component: {fileID: 7777436515376038389}
   m_Layer: 0
   m_Name: m9_bayonet_Standard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9004903422020239192
 Transform:
   m_ObjectHideFlags: 0
@@ -208,7 +209,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.17, y: 2.17, z: 2.17}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8498866976721469314}
   - {fileID: 807292990787354739}
@@ -262,6 +263,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a2f72e424949fbbc6acb1b96a939a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Codebase.Knife
+  _playerCamera: {fileID: 0}
+  _weaponAnimation: {fileID: 7777436515376038389}
+  _forwardVector: {x: 0, y: 0, z: 0}
+  _rotationVector: {x: 0, y: 0, z: 0}
+  _raycastDistance: 1.6
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  _knifeDamage: 50
+  <FireRate>k__BackingField: 0
+--- !u!114 &7777436515376038389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627779092089365986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5aac19d3df74892817fff06a5b6d873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Codebase.WeaponAnimation
+  _forwardVector: {x: 0, y: 0, z: 0.5}
+  _rotationVector: {x: 17.85, y: -290.7, z: 6.61}
+  hitDuration: 0.2
+  returnDuration: 0.2
 --- !u!1 &8700099049857426212
 GameObject:
   m_ObjectHideFlags: 0

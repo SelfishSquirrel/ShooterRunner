@@ -22,7 +22,6 @@ namespace Codebase
 
         private void Start()
         {
-            // Блокируем курсор в центре экрана
             Cursor.lockState = CursorLockMode.Locked;
         }
 
@@ -70,12 +69,6 @@ namespace Codebase
             Vector3 move = transform.right * moveX + transform.forward * moveZ;
             move = move.normalized * _playerSpeed;
             _controller.Move(move * Time.deltaTime);
-        }
-
-
-        private void OnDestroy()
-        {
-            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

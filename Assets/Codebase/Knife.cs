@@ -13,10 +13,12 @@ namespace Codebase
         [SerializeField] private float _raycastDistance = 1.6f;
         [SerializeField] private LayerMask _layerMask;
         [SerializeField] private float _knifeDamage;
+        [field: SerializeField] public float FireRate { get; set; }
         private Sequence _sequence;
         private bool _canHit = true;
         private Vector3 _origin;
         private Vector3 _rotation;
+        private float _elapsedTime;
 
         private void Start()
         {
@@ -26,10 +28,11 @@ namespace Codebase
 
         public void Use()
         {
+            if (_elapsedTime < FireRate) return; 
             if (!_canHit) return;
-
             _weaponAnimation.Hit();
             TryDamage();
+            _elapsedTime = 0;
         }
 
         public void Deactivate()

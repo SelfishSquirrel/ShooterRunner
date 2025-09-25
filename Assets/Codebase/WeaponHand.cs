@@ -12,12 +12,12 @@ namespace Codebase
 
         private void Start()
         {
-            _currentWeapon =  _rifle;
+            _currentWeapon = _rifle;
         }
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
                 if (_currentWeapon == null) return;
 

@@ -8,6 +8,7 @@ namespace Codebase
         [field: SerializeField] public float CurrentHealth { get; set; }
         [field: SerializeField] public float MaxHealth { get; set; }
 
+        public event Action OnHurt;
         private void Start()
         {
             CurrentHealth = MaxHealth;
@@ -22,6 +23,7 @@ namespace Codebase
                 Destroy(gameObject);
             }
             CurrentHealth -= health;
+            OnHurt?.Invoke();
         }
     }
     
